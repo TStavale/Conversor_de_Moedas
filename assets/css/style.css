@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    line-height: 18px;
+    
 }
 
 body {
@@ -13,6 +16,7 @@ body {
 
 .container {
     width: 375px;
+    background-color: #F4F4F4;
     margin: 0 auto;
     margin-top: 100px; 
 }
@@ -23,10 +27,8 @@ header {
 }
 
 h1 {
-    font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    line-height: 18px;
     color: #F4F4F4;
     text-align: center;
     padding-top:22px;
@@ -34,16 +36,14 @@ h1 {
 }
 
 main {
-    background: #E5E5E5;
+    background: #F4F4F4;
     padding: 24px;
 
 }
 
 label {
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 18px;
     color: #777777;
 }
 
@@ -87,10 +87,8 @@ button {
     margin-top: 24px;
     margin-bottom: 36px;
 
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 18px;
     color: #F4F4F4;
 }
 
@@ -100,4 +98,33 @@ button:hover {
 
 button:active {
     opacity: 0.7;
+}
+
+section {
+    border: 1px solid #1B83E2;
+    border-radius: 4px;
+}
+
+.currency-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.currency-name {  
+    font-weight: 400;
+    font-size: 14px;  
+    color: #777777;
+
+}
+
+.currency-value {
+    font-weight: 700;
+    font-size: 20px;
+    color: #1B83E2;
+    margin-top: 5px;
+}
+
+.arrow-img {
+    margin: 15px auto;
+    display: block;
 }
