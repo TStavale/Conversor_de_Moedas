@@ -1,17 +1,17 @@
 const button = document.getElementById ('convert-button');
 const select = document.getElementById ('currency-select');
 
-const dolar = 5.16;
-const euro = 5.55;
-const BTC = 94196.67;
-
-
-const convertValue = () => {
+const convertValue = async () => {
     const inputreais = document.getElementById('input-real').value;
     const realValueText = document.getElementById('real-value-text');
     const currencyValueText = document.getElementById('currency-value-text');
 
-    
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then( response => response.json()); // O fecth é uma biblioteca nativa do javaScript
+
+    const dolar = data.USDBRL.high;
+    const euro = data.EURBRL.high;
+    const BTC = data.BTCBRL.high;
+
     realValueText.innerHTML = new Intl.NumberFormat('pt-Br',
         { style: 'currency', currency: 'BRL'}
     ). format(inputreais);
